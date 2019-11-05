@@ -13,11 +13,11 @@ ROS Kinetic, Ubuntu 16.04 LTS
 Yi-Wei (Mike), Chen
 ## Installation 
 ### Requirements 
-##### ROS package 
+##### ROS packages 
 + [ROS](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)<br>
 + [ROS-Industrial](http://wiki.ros.org/Industrial/Install)<br>
 + [RViz](http://wiki.ros.org/rviz/UserGuide)<br>
-##### Robot package
+##### Robot packages
 Go to your catkin workspace:<br>
 <code>cd ~/catkin_ws/src</code><br>
 Clone these repositories:<br>
@@ -25,7 +25,7 @@ Clone these repositories:<br>
 <code>git clone https://github.com/ros-industrial/abb.git </code><br>
 + **Motoman**: <br>
 <code>git clone https://github.com/ros-industrial/motoman.git </code><br>
-##### Kinematic package
+##### Kinematic packages
 Clone these repositories to your src directory:<br>
 **hrl-kdl**<br>
 <code>git clone https://github.com/gt-ros-pkg/hrl-kdl.git </code><br>
