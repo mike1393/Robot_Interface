@@ -7,14 +7,14 @@ ROS package for robot trajectroy simulation<br>
 + Joint Trajectory File Input
 + Tool Path File Input
 ### Setup 
-ROS Kinetic, Ubuntu 16.04 LTS
+[ROS Kinetic, Ubuntu 16.04 LTS](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 <br>
 ### Maintainer 
 Yi-Wei (Mike), Chen
 ## Installation 
 ### Requirements 
 ##### ROS packages 
-+ [ROS](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment)<br>
++ [ROS-kinetic](http://wiki.ros.org/kinetic/Installation)<br>
 + [ROS-Industrial](http://wiki.ros.org/Industrial/Install)<br>
 + [RViz](http://wiki.ros.org/rviz/UserGuide)<br>
 ##### Robot packages
