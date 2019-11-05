@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot name="mesh">
+  <link name="tool0">
+    <visual>
+      	<geometry>
+          	<mesh filename="package://motoman_app/mesh/gp8_probe.STL"
+                scale="0.001 0.001 0.001"/>
+      	</geometry>
+	  	<material name="ABS" >
+          	<color rgba="1.0 0.0 0.0 1.0" />
+         </material> 	
+    	</visual>
+  </link>
+</robot>

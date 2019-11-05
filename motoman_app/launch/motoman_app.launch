@@ -1,0 +1,18 @@
+<launch>
+
+
+ 
+ <!-- If finished debugging -->
+
+	<node name="visualize_robot" pkg="motoman_app" type="visualize_robot" required="true"/>
+	<node name="visualize_tool" pkg="motoman_app" type="visualize_tool"/>
+	<node name="CADWindow" pkg="motoman_app" type="CADWindow"/>
+	<node name="visualize_CAD" pkg="motoman_app" type="visualize_CAD" />
+	<node name="calculation" pkg="motoman_app" type="calculation"/>
+	<node name="simulation" pkg="motoman_app" type="simulation"/>
+	<node name="robot_enable" pkg="motoman_app" type="robot_enable"/>
+	<node name="robot_run" pkg="motoman_app" type="robot_run"/>
+	<node name="coordinator_node" pkg="coordinator" type="coordinator_node" required="true" clear_params="true"/>
+	<node name="import_stand" pkg="object_viz" type="import_stand"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find motoman_app)/config/moto_interface.rviz" respawn="true"/>
+</launch>

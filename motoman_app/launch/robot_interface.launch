@@ -1,0 +1,33 @@
+<launch>
+	<!-- 	dynamic argumanets 192.168.10.31-->
+	<arg name="robot_ip" />
+	<!-- controller: Controller name (yrc1000) -->
+	<arg name="controller" />
+	<arg name="robot_type" />
+
+	<arg name="package_path" value="(find motoman_$(arg robot_type)_support)"/>
+	<arg name="dollar" value="$"/>
+
+	<!-- robot streaming  -->
+	    <rosparam command="load" file="$(arg dollar)$(arg package_path)/config/joint_names_$(arg robot_type).yaml" />
+	<include file="$(find motoman_driver)/launch/robot_interface_streaming_$(arg controller).launch">
+		<arg name="robot_ip"   value="$(arg robot_ip)" />
+	</include>
+
+
+<!-- 	<include file="$(find motoman_driver)/launch/robot_state_$(arg controller).launch">
+		<arg name="robot_ip"   value="$(arg robot_ip)" />
+	</include> -->
+	<!-- 	trajectory simulation -->
+<!-- 	<param name="use_gui" value="true" /> -->
+<!-- 		<rosparam param="source_list">["input_value" ,"now_joint_states"]</rosparam> -->
+<!-- 		<rosparam param="source_list">["input_value"]</rosparam> -->
+<!-- 		<remap from="joint_states" to="all_joint_states" /> -->
+<!-- 	<node name="init_value_sub_$(arg robot_type)" pkg="motoman_$(arg robot_type)_support" type="init_value_sub_$(arg robot_type)" required="true"/> -->
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" 
+		type="robot_state_publisher" required="true"/>
+<!-- 		<remap from="joint_states" to="all_joint_states" /> -->
+
+ 	<node name="init_value_sub_$(arg robot_type)" pkg="motoman_app" type="init_value_sub_$(arg robot_type)" respawn="true"/>
+</launch>

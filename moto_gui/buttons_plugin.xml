@@ -1,0 +1,9 @@
+<library path="lib/librviz_moto_gui">
+  <class name="moto_gui/gui_buttons"
+         type="gui_btn::gui_buttons"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget for HMI.
+    </description>
+  </class>
+</library>
